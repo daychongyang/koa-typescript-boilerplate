@@ -1,8 +1,8 @@
 import Router from 'koa-router'
-import A from './a'
+import user from './user'
 
 let router = new Router()
 
-router.use('/', A.routes(), A.allowedMethods())
+router.use('/', user.routes(), user.allowedMethods())
 
 export default router
