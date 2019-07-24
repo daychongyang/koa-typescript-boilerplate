@@ -8,13 +8,14 @@
   "scripts": {
     "build": "tsc",
     "dev": "npm run start:ts-debug",
-    "start": "",
-    "start:debug": "concurrently 'tsc -w' 'nodemon node -r dotenv/config bin/www'",
-    "start:ts-debug": "nodemon --exec ts-node -r dotenv/config ./src/index.ts"
+    "init:db": "",
+    "start:debug": "concurrently 'tsc -w' 'nodemon node -r dotenv/config dist/index.js'",
+    "start:ts-debug": "nodemon --exec ts-node -r dotenv/config -r tsconfig-paths/register  ./src/index.ts"
   },
   "dependencies": {
     "koa": "^2.7.0",
     "koa-json": "^2.0.2",
+    "koa-log4": "^2.3.2",
     "koa-logger": "^3.2.1",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0"
@@ -26,6 +27,7 @@
     "@types/koa": "^2.0.49",
     "@types/koa-bodyparser": "^4.3.0",
     "@types/koa-json": "^2.0.18",
+    "@types/koa-log4": "^2.3.1",
     "@types/koa-logger": "^3.1.1",
     "@types/koa-router": "^7.0.42",
     "@types/koa-static": "^4.0.1",
@@ -35,6 +37,7 @@
     "dotenv": "^8.0.0",
     "nodemon": "^1.19.1",
     "ts-node": "^8.3.0",
+    "tsconfig-paths": "^3.8.0",
     "typescript": "^3.5.3"
   }
 }

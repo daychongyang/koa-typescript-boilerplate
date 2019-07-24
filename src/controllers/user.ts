@@ -1,10 +1,15 @@
 import { Context } from 'koa'
 
-export const getUserInfo = (ctx: Context) => {
-  ctx.body = {
-    code: 200,
-    data: {
-      name: 'Day',
-    },
+class UserController {
+  getInfo = (ctx: Context) => {
+    ctx.body = {
+      code: 200,
+      data: {
+        name: 'Day',
+      },
+      ctx,
+    }
   }
 }
+
+export default new UserController()

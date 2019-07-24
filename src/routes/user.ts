@@ -1,9 +1,9 @@
 import Router from 'koa-router'
-import { getUserInfo } from '../controllers/user'
+import User from '../controllers/user'
 
 const router = new Router({ prefix: 'user' })
 
-router.get('/current', getUserInfo)
+router.get('/current', User.getInfo)
 
 router.post('/all', (ctx, next) => {
   ctx.body = 'hello a module router'

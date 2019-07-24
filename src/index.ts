@@ -1,7 +1,9 @@
-import app = require('./app')
+import app from '@/app'
+import { port } from '@/config'
 
-const { PORT = 12306 } = process.env
+const { PORT = port } = process.env
 
 app.listen(PORT, () => {
-  console.info(`App is running at port:${PORT}`)
+  const { appLogger } = app.context
+  appLogger.info(`Application successfully started at port:${PORT}`)
 })
