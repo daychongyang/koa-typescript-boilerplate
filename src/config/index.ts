@@ -2,10 +2,10 @@
 export const port = 8080
 
 /** DataBase Config */
-export const database = {
+export const db = {
   DATABASE: 'demo',
   USERNAME: 'root',
-  PASSWORD: 'abc123',
-  PORT: '33036',
-  HOST: 'localhost',
+  PASSWORD: '',
+  PORT: '27017',
+  HOST: '127.0.0.1',
 }

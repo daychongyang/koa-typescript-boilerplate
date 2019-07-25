@@ -3,9 +3,8 @@ import { resolve } from 'path'
 import log from 'koa-logger'
 import json from 'koa-json'
 import resource from 'koa-static'
-
 import router from '@/routes'
-import logger, { koaLogger, errorLogger, appLogger } from '@/utils/log'
+import { logger, koaLogger, errorLogger, appLogger } from '@/utils'
 
 const app = new Koa()
 

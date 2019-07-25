@@ -3,10 +3,6 @@ import User from '../controllers/user'
 
 const router = new Router({ prefix: 'user' })
 
-router.get('/current', User.getInfo)
-
-router.post('/all', (ctx, next) => {
-  ctx.body = 'hello a module router'
-})
+router.get('/list', User.query)
 
 export default router

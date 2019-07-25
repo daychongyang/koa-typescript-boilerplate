@@ -21,4 +21,3 @@ export const appLogger = getLogger('app')
 export const errorLogger = getLogger('error')
 
 export * from 'koa-log4'
-export default logger
