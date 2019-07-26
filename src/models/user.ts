@@ -4,7 +4,6 @@ const userSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: true,
     },
     mobile: {
       type: Number,
@@ -12,6 +11,10 @@ const userSchema = new mongoose.Schema(
     },
     avatar: {
       type: String,
+    },
+    password: {
+      type: String,
+      required: true,
     },
     identity: {
       type: Number,

@@ -1,8 +1,21 @@
 import { Context } from 'koa'
-import User from '@/models/user'
+import UserService from '@/services/user'
 
 class UserController {
-  async create(ctx: Context) {}
+  async create(ctx: Context) {
+    const { name, mobile, password, identity = 1 } = ctx.request.body
+    try {
+      await UserService.create({ name, mobile, password, identity })
+    } catch (e) {
+      console.error(e)
+    }
+    ctx.body = {
+      code: 200,
+      data: true,
+      payload: ctx.request.body,
+      query: ctx.request.query,
+    }
+  }
 
   async delete(ctx: Context) {}
 

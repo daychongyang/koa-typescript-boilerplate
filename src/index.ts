@@ -1,7 +1,4 @@
-import { resolve } from 'path'
 import { createServer } from 'http'
-import { parse } from 'url'
-import next from 'next'
 import app from '@/app'
 import { port } from '@/config'
 import { connectDataBase } from '@/utils'
