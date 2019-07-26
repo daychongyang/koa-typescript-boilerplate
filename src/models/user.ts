@@ -6,7 +6,14 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    age: {
+    mobile: {
+      type: Number,
+      required: true,
+    },
+    avatar: {
+      type: String,
+    },
+    identity: {
       type: Number,
       required: true,
     },
