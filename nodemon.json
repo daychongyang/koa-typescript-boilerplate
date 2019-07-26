@@ -1,5 +1,5 @@
 {
   "verbose": true,
-  "watch": ["dist/**/*", "src/**/*", "bin/**/*"],
+  "watch": ["src/**/*"],
   "execMap": {}
 }

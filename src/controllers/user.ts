@@ -2,15 +2,15 @@ import { Context } from 'koa'
 import User from '@/models/user'
 
 class UserController {
-  async query(ctx: Context) {
-    try {
-      await User.create({ name: 'day', age: 18 })
+  async create(ctx: Context) {}
 
-      ctx.body = await User.collection.find({}, { fields: { name: 'name', id: '_id' } }).limit(2)
-    } catch (e) {
-      ctx.body = e
-    }
-  }
+  async delete(ctx: Context) {}
+
+  async update(ctx: Context) {}
+
+  async detail(ctx: Context) {}
+
+  async query(ctx: Context) {}
 }
 
 export default new UserController()

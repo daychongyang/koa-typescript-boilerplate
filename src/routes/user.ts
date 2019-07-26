@@ -1,16 +1,13 @@
 import Router from 'koa-router'
 import User from '../controllers/user'
 
-const router = new Router({ prefix: 'users' })
+const router = new Router()
 
-router.get('/', User.query)
-
-router.get('/:id', User.query)
-
-router.post('/', User.query)
-
-router.patch('/:id', User.query)
-
-router.delete('/:id', User.query)
+router
+  .get('/', User.query)
+  .get('/:id', User.query)
+  .post('/', User.query)
+  .patch('/:id', User.query)
+  .delete('/:id', User.query)
 
 export default router
