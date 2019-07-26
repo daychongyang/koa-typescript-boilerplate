@@ -3,19 +3,13 @@
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> a
+> A koa boilerplate (typescript)
 
 ## Install
 
 ```sh
 npm install
 ```
-
-## Author
-
-👤 **Day**
-
-- Github: [@daychongyang](https://github.com/daychongyang)
 
 ## Show your support
 
