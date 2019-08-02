@@ -23,7 +23,16 @@ class UserController {
 
   async detail(ctx: Context) {}
 
-  async query(ctx: Context) {}
+  async query(ctx: Context) {
+    try {
+      ctx.body = {
+        code: 200,
+        data: await UserService.query(),
+      }
+    } catch (e) {
+      console.error(e)
+    }
+  }
 }
 
 export default new UserController()
